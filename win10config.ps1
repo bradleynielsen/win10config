@@ -182,6 +182,11 @@ Stop-Process -name explorer
 # Disable Taskbar / Cortana Search Box on Windows 11
 New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -PropertyType DWord -Value "00000000";
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Value "00000000";
+ 
+ 
+ 
+ 
+ Get-Process -Name explorer | Stop-Process
 
 
 #>
